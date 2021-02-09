@@ -6,7 +6,9 @@
 
 
 
-### 1. SW Expert Academy [링크][https://swexpertacademy.com/main/main.do]
+### 1. SW Expert Academy
+
+- [링크][https://swexpertacademy.com/main/main.do]
 
 
 

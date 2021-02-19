@@ -97,4 +97,111 @@
      - 레이저를 만날 때 마다 1씩 개수를 추가
      - 파이프가 맞다면, 결과에 파이프의 개수를 더해준다.
 
-  - 긴 파이프를 얻었다면, 그 안에 있는 파이프는 더 쉬운 방식으로 얻을 수 있을까?
+- 해결
+
+  - 너무 어렵게 생각한 것 같다
+
+  - 괄호의 개수가 많기 때문에, 이중 반복문을 사용하지 않는 방법으로 생각하자.
+
+  - 풀이 과정은 다음과 같다
+
+    1. 괄호 문자열을 순환하여, 괄호가 열리고 닫힐 때 작업 수행
+       1. 열린 괄호를 만난 경우
+
+          1. 열린 괄호의 개수에 1 추가
+
+             `current_pipe += 1`
+
+       2. 닫힌 괄호를 만난 경우
+
+          1. 열린 괄호 개수 1 감소
+
+             `current_pipe -= 1`
+
+          2. 이전 인덱스에 해당하는 괄호가 열린 괄호인 경우 == 레이저
+
+             `if pipe[idx-1] == "("`
+
+             1. 지금까지 열린 괄호의 개수만큼 파이프가 잘려나갔으니, 잘린 파이프 개수에 추가해준다
+
+                `cut_pipe += current_pipe`
+
+          3. 파이프 1개가 끝났으니, 잘린 파이프 개수에 1을 추가한다.
+
+             `else: cut_pipe += 1`
+
+
+
+### 4864 문자열비교
+
+동일한 brute-force 방식이지만, 반복문 코드를 더 간결하게 짤 수 있다.
+
+내 코드
+
+```python
+    for word in str2:
+        # str1에 있는 문자와 일치한다면, 다음 문자를 찾고
+        if word == str1[idx]:
+            idx += 1
+            # 모든 문자와 순서대로 일치한다면, 검색을 종료한다.
+            if idx == len(str1):
+                result = 1
+                break
+        # 일치하지 않는다면, 다시 첫 문자를 찾는다.
+        else:
+            idx = 0
+            if word == str1[idx]:
+                idx += 1
+```
+
+교수님 코드
+
+```python
+def brute_force1(p, t):
+    for i in range(len(t)-len(p)+1):
+        for j in range(len(p)):
+            # t에서는 i만큼 shift되는 것
+            if p[j] != t[i+j]:
+                break
+        else:
+            return 1
+    return 0
+```
+
+
+
+### 1979 어디에 단어가 들어갈 수 있을까
+
+경계 조건을 설정하는 대신, 테두리에 0인 영역을 추가하여 문제를 해결할 수도 있다.
+
+```python
+for r in range(N):
+    count = 0
+    c = 0
+    while c < N:
+        if arr[r][c] == 0 or c == N-1:
+            if count == M:
+                result += 1
+            count = 0
+        else:
+            count += 1
+        c += 1
+```
+
+```python
+arr = [list(map(int, input().split()))+[0] for _ in range(N)]		# 왼쪽 끝에 벽 추가
+arr.append([0]*(N+1))												# 아래 끝에 벽 추가
+
+for r in range(N):
+    count = 0
+    c = 0
+    while c < N+1:
+        if arr[r][c] == 0:
+            if count == M:
+                result += 1
+            count = 0
+        else:
+            count += 1
+        c += 1
+```
+

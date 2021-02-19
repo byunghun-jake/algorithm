@@ -6,60 +6,32 @@ sys.stdin = open("input.txt")
 
 T = int(input())
 for tc in range(1, T + 1):
-    line = list(input())
-    L = len(line)
-    # 회문처럼 풀어볼까?
+    pipe = list(input())
+    L = len(pipe)
+    
+    # 막대기를 순환하며, 괄호가 열리고 닫힐 때 작업을 수행하자
+    # 1. 괄호가 열릴 때, 현재 열린 괄호의 개수에 1을 추가한다.
+    # 2. 괄호가 닫힐 때,
+    # 2-1. 열린 괄호의 개수를 1 줄인다.
+    # 2-2. 이전 괄호가 열림 괄호라면, 레이저라는 뜻.
+    # 2-2-1. 지금까지 열린 괄호의 개수만큼 파이프가 잘려나갔으니, 잘린 파이프 개수에 추가해준다.
+    # 2-3. 이전 괄호가 열림 괄호가 아니라면,
+    # 2-3-1. 파이프 1개가 끝났으니, 잘린 파이프 개수에 1을 추가한다.
 
-    line_list = []
-    laser_list = []
+    cut_pipe = 0
+    current_pipe = 0
+    for idx in range(L):
+        if pipe[idx] == "(":
+            current_pipe += 1
+        else:
+            current_pipe -= 1
+            is_lazar = pipe[idx-1] == "("
+            if is_lazar:
+                cut_pipe += current_pipe
+            else:
+                cut_pipe += 1
 
-    # 시작점 설정
-    start = 0
-    result = 0
-    while start < L - 1:
-        # 종료점 설정
-        # 시작점 바로 옆부터 커지면서 (는 +1 )는 -1이 되고,
-        # 0이 되는 순간 판단 종료
-        # 0이 되지 않은 상태로 끝까지 도달해도 종료
-        if line[start] == ")":
-            continue
-
-        for e in range(start + 1, L):
-            if line[e] == "(":
-                continue
-            count = 1
-            pipe_count = 1
-            sub_line = line[start:e + 1]
-            before_col = "("
-            for i in range(1, len(sub_line)):
-                if sub_line[i] == "(":
-                    count += 1
-                else:
-                    count -= 1
-                    if count == 0:
-                        break
-            if count == 0:
-                if e - start == 1:
-                    laser_list.append(start)
-                else:
-                    # line_list.append((s, e))
-                    result += pipe_count
-                    break
-        start += 1
-
-
-    # print(line_list)
-    # print(laser_list)
-
-    # 파이프 리스트를 순환하며 몇 개의 파이프가 나오는지 확인
-    # count = 0
-    # for s, e in line_list:
-    #     count += 1
-    #     for i in range(s, e):
-    #         for laser_point in laser_list:
-    #             if i == laser_point:
-    #                 count += 1
-    print(f"#{tc} {pipe_count}")
+    print(f"#{tc} {cut_pipe}")
 
 
 

@@ -47,16 +47,41 @@
 | 4865      | 글자수                           | d2     | 21.02.18     | python     |
 | 1216      | 회문2                            | d3     | 21.02.18     | python     |
 | 5432      | 쇠막대기 자르기 (어려움)         | d4     | 21.02.18     | python     |
-
-- 균형점 문제는 접근하는 실마리를 찾기 너무 어려웠다.
-
-  이진 탐색은 배운 내용이었지만, 이진 탐색으로 풀어야한다는 점도 알지 못했다.
-
-  또한, 근사값을 찾는 문제 역시 처음이었기에 많은 것을 배울 수 있었던 문제였다.
+| 2005      | 파스칼의 삼각형                  | d2     | 21.02.23     | python     |
+| 4866      | 괄호검사                         | d2     | 21.02.23     | python     |
+| 4869      | 종이붙이기 (어려움)              | d2     | 21.02.23     | python     |
+| 4871      | 그래프 경로                      | d2     | 21.02.23     | python     |
+| 4873      | 반복문자 지우기                  | d2     | 21.02.23     | python     |
+| 1217      | 거듭제곱                         | d4     | 21.02.23     | python     |
+| 1218      | 괄호 짝짓기                      | d4     | 21.02.23     | python     |
+| 1219      | 길찾기                           | d4     | 21.02.23     | python     |
 
 ---
 
-## 메모
+## SWEA - DP, DFS
+
+### 4869 - 종이붙이기
+
+- 점화식을 찾아낸다는 개념 조차 생각하지 못했었다.
+- 직접 그려봤더니 조금씩 이해가 되었다.
+
+1. 가장 기본이 되는 조건을 찾아보기
+
+   1. 너비가 10일 때,
+   2. 너비가 20일 때
+
+   **만들 수 있는 가장 작은 단위**
+
+2. 길이가 n인 직사각형을 만들기 위해 어떻게 해야 하는가 파악하기
+
+
+
+- 참고
+  - [동빈나_다이나믹 프로그래밍 타일링 문제 풀어보기][https://www.youtube.com/watch?v=YHZiWaL49HY&t=114s&ab_channel=%EB%8F%99%EB%B9%88%EB%82%98]
+
+
+
+## SWEA
 
 ### 1216 회문 2
 
@@ -205,3 +230,71 @@ for r in range(N):
         c += 1
 ```
 
+
+
+## 백준
+
+### 2798_블랙잭(브루트포스)
+
+- 이진법을 활용한 부분집합 만들기는 요소의 개수가 정해져 있을 때 사용하기엔 적합하지 않을 수 있다.
+
+  - 이진법을 활용한 부분집합 코드
+
+    ```python
+    for i in range(1 << n):
+        sub_cards = []
+        for j in range(n):
+            if i & (1 << j):
+                sub_cards.append(cards[j])
+        if len(sub_cards) == 3:
+            total = sum(sub_cards)
+            if total == M:
+                result = total
+                break
+            elif result < total <= M:
+                result = total
+    print(result)
+    ```
+
+  - 반복문과 인덱스를 활용한 부분집합 코드
+
+    ```python
+    is_done = False
+    for a in range(n-2):
+        for b in range(a+1, n-1):
+            for c in range(b+1, n):
+                total = cards[a] + cards[b] + cards[c]
+                if total == M:
+                    result = M
+                    is_done = True
+                    break
+                if result < total < M:
+                    result = total
+            if is_done:
+                break
+        if is_done:
+            break
+    ```
+
+### 2231_분해합(브루트포스)
+
+- 최소 조건에 대해 고려해보는 것으로, 코드의 효율성을 높일 수 있다.
+
+  ```python
+  N = int(input())
+  result = 0
+  start_num = N // 2
+  for i in range(start_num, N):
+      num = i
+      total = num
+      while num:
+          total += num % 10
+          num //= 10
+      if total == N:
+          result = i
+          break
+  
+  print(result)
+  ```
+
+  ![image-20210221221308541](README.assets/image-20210221221308541.png)

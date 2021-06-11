@@ -31,7 +31,7 @@ def countingSort(arr):
         else:
             acc_counts[i] = acc_counts[i - 1] + counts[i]
     temp = [-1] * (N + 1)
-    for i in range(N - 1, -1, -1):
+    for i in range(N):
         temp[acc_counts[arr[i]]] = arr[i]
         acc_counts[arr[i]] -= 1
     return temp[1:]

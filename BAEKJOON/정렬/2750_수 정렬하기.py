@@ -34,6 +34,17 @@ def selectionSort_loop():
             ARR[c_idx], ARR[min_idx] = ARR[min_idx], ARR[c_idx]
 
 
+# 버블정렬
+def bubbleSort():
+    print(ARR)
+    for i in range(N-1, 0, -1):
+        for j in range(i):
+            if ARR[j] > ARR[j + 1]:
+                ARR[j], ARR[j + 1] = ARR[j + 1], ARR[j]
+            print(ARR)
+
+
+
 # N: 수의 개수
 # ARR: 수가 담긴 배열
 N = int(input())
@@ -42,6 +53,9 @@ ARR = [int(input()) for _ in range(N)]
 # 정렬
 # 1. 선택정렬
 # selectionSort_recursion(0)
-selectionSort_loop()
+# selectionSort_loop()
+
+# 2. 버블정렬
+bubbleSort()
 for i in range(N):
     print(ARR[i])

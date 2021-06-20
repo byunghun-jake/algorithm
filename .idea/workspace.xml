@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c9dc21fe-58f4-4eb3-aefd-dd7a20f4a572" name="Default Changelist" comment="210610 - 정렬">
-      <change afterPath="$PROJECT_DIR$/BAEKJOON/정렬/13333_Q인덱스.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BAEKJOON/정렬/2456_학급회장.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BAEKJOON/정렬/2751_수정렬하기2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BAEKJOON/정렬/2959_거북이.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BAEKJOON/정렬/6996_애너그램.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+    <list default="true" id="c9dc21fe-58f4-4eb3-aefd-dd7a20f4a572" name="Default Changelist" comment="210611 - 정렬">
+      <change afterPath="$PROJECT_DIR$/BAEKJOON/재귀/별찍기.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BAEKJOON/재귀/이진수 변환.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BAEKJOON/재귀/카드 놓기.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BAEKJOON/정렬/10989_수 정럴하기3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BAEKJOON/정렬/11650_좌표 정렬하기.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BAEKJOON/정렬/11651_좌표 정렬하기 2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BAEKJOON/정렬/1181_단어 정렬.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BAEKJOON/정렬/1427_소트인사이드.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BAEKJOON/정렬/2108_통계학.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BAEKJOON/정렬/2108_통계학_민경.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BAEKJOON/정렬/버블정렬.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BAEKJOON/정렬/선택정렬.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BAEKJOON/정렬/카운팅정렬.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/basic/Permutation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/basic/backtracking_powerset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/basic/permutation_recursion.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BAEKJOON/정렬/2750_수 정렬하기.py" beforeDir="false" afterPath="$PROJECT_DIR$/BAEKJOON/정렬/2750_수 정렬하기.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BAEKJOON/정렬/2752_세수정렬.py" beforeDir="false" afterPath="$PROJECT_DIR$/BAEKJOON/정렬/2752_세수정렬.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAEKJOON/재귀/2447_별 찍기.py" beforeDir="false" afterPath="$PROJECT_DIR$/BAEKJOON/재귀/2447_별 찍기.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +44,9 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/basic/backtracking_powerset.py" root0="SKIP_INSPECTION" />
+  </component>
   <component name="ProjectId" id="1tgkeeXpL4A7XkSze8cMHp6cmGC" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -47,9 +59,15 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/BAEKJOON/정렬" />
   </component>
-  <component name="RunManager" selected="Python.2751_수정렬하기2">
-    <configuration name="13333_Q인덱스" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Code\Study\algorithm\BAEKJOON\정렬" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.2108_통계학_민경">
+    <configuration name="11650_좌표 정렬하기" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="algorithm" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -62,7 +80,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BAEKJOON/정렬/13333_Q인덱스.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BAEKJOON/정렬/11650_좌표 정렬하기.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -71,7 +89,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="2750_수 정렬하기" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="11651_좌표 정렬하기 2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="algorithm" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -84,7 +102,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BAEKJOON/정렬/2750_수 정렬하기.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BAEKJOON/정렬/11651_좌표 정렬하기 2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -93,7 +111,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="2751_수정렬하기2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="1181_단어 정렬" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="algorithm" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -106,7 +124,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BAEKJOON/정렬/2751_수정렬하기2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BAEKJOON/정렬/1181_단어 정렬.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -115,7 +133,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="2752_세수정렬" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="1427_소트인사이드" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="algorithm" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -128,7 +146,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BAEKJOON/정렬/2752_세수정렬.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BAEKJOON/정렬/1427_소트인사이드.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -137,7 +155,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="2108_통계학_민경" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="algorithm" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -145,12 +163,56 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/BAEKJOON/정렬" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BAEKJOON/정렬/2108_통계학_민경.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="선택정렬" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="algorithm" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/BAEKJOON/정렬" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BAEKJOON/정렬/선택정렬.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="카운팅정렬" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="algorithm" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/BAEKJOON/정렬" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BAEKJOON/정렬/카운팅정렬.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -161,11 +223,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.2751_수정렬하기2" />
-        <item itemvalue="Python.2750_수 정렬하기" />
-        <item itemvalue="Python.2752_세수정렬" />
-        <item itemvalue="Python.13333_Q인덱스" />
-        <item itemvalue="Python.test (1)" />
+        <item itemvalue="Python.2108_통계학_민경" />
+        <item itemvalue="Python.1181_단어 정렬" />
+        <item itemvalue="Python.11651_좌표 정렬하기 2" />
+        <item itemvalue="Python.11650_좌표 정렬하기" />
+        <item itemvalue="Python.1427_소트인사이드" />
       </list>
     </recent_temporary>
   </component>
@@ -183,7 +245,14 @@
       <workItem from="1623301692227" duration="4814000" />
       <workItem from="1623375027046" duration="5761000" />
       <workItem from="1623387065324" duration="11816000" />
-      <workItem from="1623413399931" duration="3924000" />
+      <workItem from="1623413399931" duration="4837000" />
+      <workItem from="1623756772727" duration="4898000" />
+      <workItem from="1623819124261" duration="743000" />
+      <workItem from="1623903341589" duration="2349000" />
+      <workItem from="1623989212937" duration="3727000" />
+      <workItem from="1624078713916" duration="4490000" />
+      <workItem from="1624107147323" duration="4654000" />
+      <workItem from="1624161676976" duration="8064000" />
     </task>
     <task id="LOCAL-00001" summary="문자열 / 재귀 / 정렬">
       <created>1623289867098</created>
@@ -206,7 +275,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623375099322</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="210611 - 정렬">
+      <created>1623418835334</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1623418835334</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,7 +304,8 @@
     <MESSAGE value="문자열 / 재귀 / 정렬" />
     <MESSAGE value="update" />
     <MESSAGE value="210610 - 정렬" />
-    <option name="LAST_COMMIT_MESSAGE" value="210610 - 정렬" />
+    <MESSAGE value="210611 - 정렬" />
+    <option name="LAST_COMMIT_MESSAGE" value="210611 - 정렬" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -268,6 +345,21 @@
           <line>12</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/basic/backtracking_powerset.py</url>
+          <line>24</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/BAEKJOON/정렬/11650_좌표 정렬하기.py</url>
+          <line>56</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/BAEKJOON/정렬/2108_통계학_민경.py</url>
+          <line>36</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
@@ -279,32 +371,43 @@
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
-        <watch expression="ARR" />
+        <watch expression="cnt[max_v]" language="Python" />
       </configuration>
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/algorithm$5576_.coverage" NAME="5576_콘테스트 Coverage Results" MODIFIED="1623293841064" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BAEKJOON/정렬" />
     <SUITE FILE_PATH="coverage/algorithm$2902_KMP.coverage" NAME="2902_KMP Coverage Results" MODIFIED="1623200853801" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BAEKJOON/문자열" />
     <SUITE FILE_PATH="coverage/algorithm$1100__.coverage" NAME="1100_하얀 칸 Coverage Results" MODIFIED="1623200548049" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BAEKJOON/문자열" />
     <SUITE FILE_PATH="coverage/algorithm$5568__.coverage" NAME="5568_카드 놓기 Coverage Results" MODIFIED="1623221752981" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BAEKJOON/재귀" />
     <SUITE FILE_PATH="coverage/algorithm$2456_.coverage" NAME="2456_학급회장 Coverage Results" MODIFIED="1623377908593" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BAEKJOON/정렬" />
     <SUITE FILE_PATH="coverage/algorithm$10798_.coverage" NAME="10798_세로읽기 Coverage Results" MODIFIED="1623206596561" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BAEKJOON/문자열" />
-    <SUITE FILE_PATH="coverage/algorithm$test.coverage" NAME="test Coverage Results" MODIFIED="1623304264596" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/JUNGOL" />
+    <SUITE FILE_PATH="coverage/algorithm$.coverage" NAME="버블정렬 Coverage Results" MODIFIED="1624112016070" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BAEKJOON/정렬" />
+    <SUITE FILE_PATH="coverage/algorithm$11650__.coverage" NAME="11650_좌표 정렬하기 Coverage Results" MODIFIED="1624165701310" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BAEKJOON/정렬" />
     <SUITE FILE_PATH="coverage/algorithm$6996_.coverage" NAME="6996_애너그램 Coverage Results" MODIFIED="1623378838597" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BAEKJOON/정렬" />
     <SUITE FILE_PATH="coverage/algorithm$2959_.coverage" NAME="2959_거북이 Coverage Results" MODIFIED="1623376120151" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BAEKJOON/정렬" />
-    <SUITE FILE_PATH="coverage/algorithm$2750__.coverage" NAME="2750_수 정렬하기 Coverage Results" MODIFIED="1623415390648" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BAEKJOON/정렬" />
     <SUITE FILE_PATH="coverage/algorithm$10953_A_B.coverage" NAME="10953_A+B Coverage Results" MODIFIED="1623199640979" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BAEKJOON/문자열" />
-    <SUITE FILE_PATH="coverage/algorithm$17478_.coverage" NAME="17478_재귀함수가재귀함수가 Coverage Results" MODIFIED="1623213840703" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BAEKJOON/재귀" />
     <SUITE FILE_PATH="coverage/algorithm$10829__.coverage" NAME="10829_이진수 변환 Coverage Results" MODIFIED="1623212836675" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BAEKJOON/재귀" />
+    <SUITE FILE_PATH="coverage/algorithm$backtracking_powerset.coverage" NAME="backtracking_powerset Coverage Results" MODIFIED="1624081550344" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/basic" />
+    <SUITE FILE_PATH="coverage/algorithm$11651___2.coverage" NAME="11651_좌표 정렬하기 2 Coverage Results" MODIFIED="1624166286541" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BAEKJOON/정렬" />
+    <SUITE FILE_PATH="coverage/algorithm$2751_2.coverage" NAME="2751_수정렬하기2 Coverage Results" MODIFIED="1623417618393" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BAEKJOON/정렬" />
+    <SUITE FILE_PATH="coverage/algorithm$13333_Q.coverage" NAME="13333_Q인덱스 Coverage Results" MODIFIED="1623391790761" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BAEKJOON/정렬" />
+    <SUITE FILE_PATH="coverage/algorithm$_.coverage" NAME="이진수 변환 Coverage Results" MODIFIED="1623903874653" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BAEKJOON/재귀" />
+    <SUITE FILE_PATH="coverage/algorithm$11718__.coverage" NAME="11718_그대로 출력하기 Coverage Results" MODIFIED="1623199361459" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BAEKJOON/문자열" />
+    <SUITE FILE_PATH="coverage/algorithm$5576_.coverage" NAME="5576_콘테스트 Coverage Results" MODIFIED="1623293841064" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BAEKJOON/정렬" />
+    <SUITE FILE_PATH="coverage/algorithm$2108_.coverage" NAME="2108_통계학 Coverage Results" MODIFIED="1624162656494" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BAEKJOON/정렬" />
+    <SUITE FILE_PATH="coverage/algorithm$1181__.coverage" NAME="1181_단어 정렬 Coverage Results" MODIFIED="1624167523634" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BAEKJOON/정렬" />
+    <SUITE FILE_PATH="coverage/algorithm$test.coverage" NAME="test Coverage Results" MODIFIED="1623304264596" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/JUNGOL" />
+    <SUITE FILE_PATH="coverage/algorithm$2750__.coverage" NAME="2750_수 정렬하기 Coverage Results" MODIFIED="1623415390648" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BAEKJOON/정렬" />
+    <SUITE FILE_PATH="coverage/algorithm$10989__3.coverage" NAME="10989_수 정럴하기3 Coverage Results" MODIFIED="1624162887759" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BAEKJOON/정렬" />
+    <SUITE FILE_PATH="coverage/algorithm$17478_.coverage" NAME="17478_재귀함수가재귀함수가 Coverage Results" MODIFIED="1623213840703" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BAEKJOON/재귀" />
+    <SUITE FILE_PATH="coverage/algorithm$Permutation.coverage" NAME="Permutation Coverage Results" MODIFIED="1623989710375" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/basic" />
+    <SUITE FILE_PATH="coverage/algorithm$2108__.coverage" NAME="2108_통계학_민경 Coverage Results" MODIFIED="1624169482592" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BAEKJOON/정렬" />
     <SUITE FILE_PATH="coverage/algorithm$10808__.coverage" NAME="10808_알파벳 개수 Coverage Results" MODIFIED="1623200002677" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BAEKJOON/문자열" />
-    <SUITE FILE_PATH="coverage/algorithm$2751_2.coverage" NAME="2751_수정렬하기2 Coverage Results" MODIFIED="1623417250153" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BAEKJOON/정렬" />
     <SUITE FILE_PATH="coverage/algorithm$1032__.coverage" NAME="1032_명령 프롬프트 Coverage Results" MODIFIED="1623202820258" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BAEKJOON/문자열" />
     <SUITE FILE_PATH="coverage/algorithm$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1623390115746" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/algorithm$13333_Q.coverage" NAME="13333_Q인덱스 Coverage Results" MODIFIED="1623391790761" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BAEKJOON/정렬" />
     <SUITE FILE_PATH="coverage/algorithm$2752_.coverage" NAME="2752_세수정렬 Coverage Results" MODIFIED="1623393816819" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BAEKJOON/정렬" />
     <SUITE FILE_PATH="coverage/algorithm$1212_82.coverage" NAME="1212_8진수2진수 Coverage Results" MODIFIED="1623205954290" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BAEKJOON/문자열" />
-    <SUITE FILE_PATH="coverage/algorithm$11718__.coverage" NAME="11718_그대로 출력하기 Coverage Results" MODIFIED="1623199361459" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BAEKJOON/문자열" />
     <SUITE FILE_PATH="coverage/algorithm$10988_.coverage" NAME="10988_팰린드롬확인 Coverage Results" MODIFIED="1623203503062" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BAEKJOON/문자열" />
+    <SUITE FILE_PATH="coverage/algorithm$1427_.coverage" NAME="1427_소트인사이드 Coverage Results" MODIFIED="1624163715924" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BAEKJOON/정렬" />
   </component>
 </project>

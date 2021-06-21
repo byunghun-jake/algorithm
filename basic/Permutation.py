@@ -9,6 +9,6 @@ for i1 in range(1, 4):
             print(i1, i2, i3)
 
 # 백트래킹을 이용해 순열 구하기
-def perm_back(arr, k, count):
-    # arr: 원본 배열
-    # k: 
+# def perm_back(arr, k, count):
+#     # arr: 원본 배열
+#     # k:

@@ -15,31 +15,45 @@ import sys
 
 def merge(left, right):
     result = []
-    L = len(left)
-    R = len(right)
     l_idx = r_idx = 0
-    while l_idx < L and r_idx < R:
+    while len(left) > l_idx and len(right) > r_idx:
+        if len(left[l_idx]) == len(right[r_idx]):
+            if left[l_idx] <= right[r_idx]:
+                result.append(left[l_idx])
+                l_idx += 1
+            else:
+                result.append(right[r_idx])
+                r_idx += 1
+        elif len(left[l_idx]) <= len(right[r_idx]):
+            result.append(left[l_idx])
+            l_idx += 1
+        else:
+            result.append(right[r_idx])
+            r_idx += 1
+    if len(left) > l_idx:
+        result += left[l_idx:]
+    else:
+        result += right[r_idx:]
 
+    return result
 
+def mergeSort(arr):
+    if len(arr) <= 1:
+        return arr
 
-# 1~50 인덱스를 갖는 배열을 생성한 뒤, 입력받은 값의 길이를 파악해 해당하는 배열에 추가한다.
-count_arr = [set()] * 51
-for i in range(51):
-    count_arr[i] = set()
-# print(count_arr)
+    mid_idx = len(arr) // 2
+    left = mergeSort(arr[:mid_idx])
+    right = mergeSort(arr[mid_idx:])
+
+    return merge(left, right)
 
 N = int(sys.stdin.readline().strip())
 
-for _ in range(N):
-    word = sys.stdin.readline().strip()
-    count_arr[len(word)].add(word)
-# print(count_arr)
+ARR = [sys.stdin.readline().strip() for _ in range(N)]
 
-for i in range(51):
-    if len(count_arr[i]) == 0:
+sorted_arr = mergeSort(ARR)
+for i in range(N):
+    if i != 0 and sorted_arr[i - 1] == sorted_arr[i]:
         continue
-    words = list(count_arr[i])
-    # words.sort()
-    selectionSort(words, len(words))
-    for word in words:
-        print(word)
+    print(sorted_arr[i])
+

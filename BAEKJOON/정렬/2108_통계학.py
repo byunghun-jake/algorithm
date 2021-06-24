@@ -5,7 +5,73 @@
 # 카운팅 정렬
 # 전달받는 숫자에 4000을 더해준다.
 import sys
+#################################
+def cnt_sort():
+    cnt_array = [0] * (NMAX + 1)
+    result = []
+    # 무작위로 들어온 것들을 하나씩 세본다.
+    for i in nums:
+        cnt_array[i] += 1
 
+    # 작은 것부터 꺼낸다.
+    for i in range(NMAX + 1):
+        # i == 1일 때,
+        # cnt_array[i] == 2
+        for j in range(cnt_array[i]):
+            result.append(i)
+    return result
+
+
+N = int(input())
+NMAX = 2000
+nums = []
+# [1, 2, 3, 4]
+
+for i in range(N):
+    # 0이상의 수로 만들기 위해
+    nums.append(int(input()) + 1000)
+
+for i in cnt_sort():
+    print(i - 1000)
+
+
+#################################
+def cnt_sort():
+    cnt_array = [0] * (NMAX + 1)
+    # [0, 0, 0, 0, 0, 0]
+    for i in nums:
+        cnt_array[i] += 1
+    # [0, 1, 1, 1, 1, 1]
+    for l in range(NMAX):
+        cnt_array[l + 1] += cnt_array[l]
+    # [0, 1, 2, 3, 4, 5]
+    result_array = [-1] * N
+    # [-1, -1, -1, -1, -1]
+    for k in nums: # nums, k = 0~4
+        cnt_array[k] -= 1
+        result_array[cnt_array[k]] = k
+    # [ ]
+    return result_array
+
+# N: 숫자의 개수
+# 이 수는 절댓값이 1,000보다 작거나 같은 정수
+# -1000 ~ 1000
+# 0 ~ 2000
+# NMAX: 숫자의 최대값 (1000씩 더했을 때)
+N = int(input())
+NMAX = 2000
+nums = []
+# [1, 2, 3, 4]
+
+for i in range(N):
+    # 0이상의 수로 만들기 위해
+    nums.append(int(input()) + 1000)
+
+# [1001, 1002, 1003, 1004]
+for i in cnt_sort():
+    print(i-1000)
+
+###########################################
 N = int(sys.stdin.readline())
 NMAX = 8001
 count_arr = [0] * NMAX

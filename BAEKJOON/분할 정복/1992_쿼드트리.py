@@ -1,40 +1,35 @@
-# 4개의 분할된 면을 순환하는 순서
-# 2사분면 > 1사분면 > 3사분면 > 4사분면
+# 왼쪽 위 사각형에서 탐색을 시작할 때, 괄호를 열고
+# 오른쪽 아래 사각형에서 탐색이 끝났을 때 괄호를 닫는다.
 
-def check_all_color_same(r, c, n):
-    color = DISPLAY[r][c]
-
-    for i in range(r, r + n):
-        for j in range(c, c + n):
-            if color != DISPLAY[i][j]:
-                return False
-    return True
-
-
-def solve(r, c, n):
+def solve(cr, cc, n):
     global answer
-
-    # 같은 색으로 이루어졌는지 탐색
-    if check_all_color_same(r, c, n):
-        answer += f"{DISPLAY[r][c]}"
-        return
+    # 같은 색인지 확인
+    color = BOARD[cr][cc]
+    is_same_color = True
+    for r in range(cr, cr + n):
+        for c in range(cc, cc + n):
+            if color != BOARD[r][c]:
+                is_same_color = False
+                break
+        if not is_same_color:
+            break
+    # 같은 색이라면
+    if is_same_color:
+        answer.append(color)
     else:
-        answer += "("
-
-        # 4분할
+        # 사각형으로 나눈다.
         mid = n // 2
-        solve(r, c, mid)
-        solve(r + mid, c, mid)
-        solve(r, c + mid, mid)
-        solve(r + mid, c + mid, mid)
-
-    answer += ")"
+        answer.append("(")
+        solve(cr, cc, mid)
+        solve(cr, cc + mid, mid)
+        solve(cr + mid, cc, mid)
+        solve(cr + mid, cc + mid, mid)
+        answer.append(")")
 
 
 N = int(input())
-DISPLAY = [input() for _ in range(N)]
-answer = ""
+BOARD = [input() for _ in range(N)]
+answer = []
 
 solve(0, 0, N)
-
-print(answer)
+print("".join(answer))

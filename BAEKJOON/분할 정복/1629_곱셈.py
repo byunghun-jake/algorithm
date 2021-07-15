@@ -5,7 +5,7 @@
 
 A, B, C = map(int, input().split())
 
-answer = 1
+# answer = 1
 
 cache = []
 # for i in range(100):
@@ -16,14 +16,18 @@ cache = []
 #     answer *= A
 
 def divide_conquer(b):
-    if b > 100:
-        res = divide_conquer(b // 2)
-        if b % 2 == 0:
-            res = res * res
-        else:
-            res = res * res * A
-    # else:
-    #     for _ in range(b):
+    if b == 0:
+        return 1
 
-answer %= C
+    n = divide_conquer(b // 2)
+
+    if b % 2 == 0:
+        return (n * n) % C
+    else:
+        return (n * n * A) % C
+
+answer = divide_conquer(B)
 print(answer)
+
+###########
+# 숫자가 너무 커지면, 나머지 연산도 오래걸린다는 걸 알 수 있었다.

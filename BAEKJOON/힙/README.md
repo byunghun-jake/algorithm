@@ -89,14 +89,39 @@
 # 새로 값이 입력되었다.
 heap[idx] = n
 
-while (idx != 1) && (heap[idx] > heap[idx//2]):
+while (idx != 1) and (heap[idx] > heap[idx//2]):
     heap[idx], heap[idx // 2] = heap[idx // 2], heap[idx]
     idx //= 2
 ```
 
 
 
+#### 삭제 (최대 힙)
 
+1. 1번째 인덱스의 값을 꺼낸 뒤, 마지막 노드에 있는 값을 1번째 인덱스에 넣는다.
+2. 자식 노드의 값 중 더 큰 값과 비교를 수행
+   - 부모 노드의 값이 크다면 비교 종료
+   - 자식 노드의 값이 크다면 값을 교환하고 2번 과정을 반복
+
+```python
+heap[1], heap[-1] = heap[-1], heap[1]
+print(heap.pop())
+idx = 1
+while idx < len(heap):
+    # 더 큰 자식 노드 찾기
+    max_idx = idx
+    lc_idx = idx * 2
+    rc_idx = lc_idx + 1
+    if lc_idx <= len(heap) and heap[max_idx] < heap[lc_idx]:
+        max_idx = lc_idx
+    if rc_idx <= len(heap) and heap[max_idx] < heap[rc_idx]:
+        max_idx = rc_idx
+    if max_idx != idx:
+        heap[idx], heap[max_idx] = heap[max_idx], heap[idx]
+        idx = max_idx
+    else:
+        break
+```
 
 
 

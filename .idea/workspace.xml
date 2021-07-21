@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c9dc21fe-58f4-4eb3-aefd-dd7a20f4a572" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/BAEKJOON/힙/11279_최대 힙.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BAEKJOON/힙/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BAEKJOON/이분탐색/2110_공유기 설치.py" beforeDir="false" afterPath="$PROJECT_DIR$/BAEKJOON/이분탐색/2110_공유기 설치.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BAEKJOON/이분탐색/2805_나무 자르기.py" beforeDir="false" afterPath="$PROJECT_DIR$/BAEKJOON/이분탐색/2805_나무 자르기.py" afterDir="false" />
-    </list>
+    <list default="true" id="c9dc21fe-58f4-4eb3-aefd-dd7a20f4a572" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -298,7 +292,7 @@
       <workItem from="1626008567013" duration="4076000" />
       <workItem from="1626343451213" duration="6191000" />
       <workItem from="1626613433410" duration="8277000" />
-      <workItem from="1626872583550" duration="6448000" />
+      <workItem from="1626872583550" duration="6479000" />
     </task>
     <task id="LOCAL-00001" summary="문자열 / 재귀 / 정렬">
       <created>1623289867098</created>
@@ -398,7 +392,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626621776308</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="이분탐색 복습 / 힙">
+      <created>1626879676727</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1626879676727</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TodoView">
@@ -467,7 +468,8 @@
     <MESSAGE value="210711 - 분할 정복" />
     <MESSAGE value="분할 정복 / 이분탐색 / 스택" />
     <MESSAGE value="이분탐색" />
-    <option name="LAST_COMMIT_MESSAGE" value="이분탐색" />
+    <MESSAGE value="이분탐색 복습 / 힙" />
+    <option name="LAST_COMMIT_MESSAGE" value="이분탐색 복습 / 힙" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

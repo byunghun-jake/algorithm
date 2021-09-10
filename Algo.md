@@ -1437,3 +1437,160 @@ def solution(answers):
     return result
 ```
 
+
+
+### 소수 만들기
+
+#### 핵심 포인트
+
+- 소수를 구하는 방법
+
+  N이 소수라면, 1과 N외에 나누어 떨어지는 수가 없다는 것입니다.
+
+  반복문으로 표현하면 다음과 같습니다.
+
+  ```python
+  for n in range(2, N):
+      if N % n == 0:
+          return "소수가 아닙니다"
+  return "소수입니다"
+  ```
+
+  하지만, N - 1까지의 모든 수를 순회할 필요는 없습니다.
+
+  N의 제곱근까지의 수를 순회하면 됩니다.
+
+  그렇게 함으로써, 순회하는 수의 개수를 줄일 수 있습니다.
+
+  ```python
+  for n in range(2, int(N ** 0.5) + 1):
+      # ...
+  ```
+
+#### 내 코드
+
+```python
+# 주어진 수가 소수인지 판별하는 함수
+def check_prime(num):
+    for n in range(2, int(num ** 0.5) + 1):
+        if num % n == 0:
+            return False
+    return True
+
+# 3개의 수를 더하는 함수
+def sum_tri(nums):
+    sums = []
+    N = len(nums)
+    for i in range(0, N - 2):
+        for j in range(i + 1, N - 1):
+            for k in range(j + 1, N):
+                sums.append(nums[i] + nums[j] + nums[k])
+    return sums
+
+def solution(nums):
+    answer = 0
+    sums = sum_tri(nums)
+    for num in sums:
+        if check_prime(num):
+            print(num)
+            answer += 1
+    return answer
+```
+
+
+
+#### 다른 사람 코드
+
+- combinations 사용
+
+  조합을 생성하는 생성자
+
+  ```python
+  from itertools import combinations as cb
+  arr = [1, 2, 3]
+  print(list(cb(arr, 2)))
+  # [(1, 2), (1, 3), (2, 3)]
+  ```
+
+```python
+def solution(nums):
+    from itertools import combinations as cb
+    answer = 0
+    for a in cb(nums, 3):
+        cand = sum(a)
+        for j in range(2, cand):
+            if cand%j==0:
+                break
+        else:
+            answer += 1
+    return answer
+```
+
+
+
+### 내적
+
+#### 핵심 포인트
+
+- 두 배열의 같은 위치에 접근하는 방법
+
+#### 내 코드 1
+
+- 인덱스로 두 배열의 같은 위치에 접근
+
+```python
+def solution(a, b):
+    answer = 0
+    for i in range(len(a)):
+        answer += a[i] * b[i]
+	return answer
+```
+
+- zip을 통해 하나의 배열로 만듬
+
+```python
+def solution(a, b):
+    return sum([n * m for n, m in zip(a, b)])
+```
+
+
+
+### 크레인 인형뽑기 게임
+
+#### 핵심 포인트
+
+- 2차원 배열을 Transpose할 수 있는가?
+
+#### 내 코드
+
+```python
+def solution(board, moves):
+    answer = 0
+    # 주어진 2차원 배열을 Transpose하면, 세로줄을 하나의 일차원 배열로 관리할 수 있다.
+    board_t = []
+    N = len(board)
+    for c in range(N):
+        column = []
+        # 뒤집어서 넣으면 pop을 통해 하나씩 빼는 걸로 인형뽑기를 할 수 있겠는데?
+        for r in range(N - 1, -1, -1):
+            if board[r][c] == 0:
+                break
+            column.append(board[r][c])
+        board_t.append(column)
+    
+    backet = []
+    for move in moves:
+        target_arr = board_t[move - 1]
+        if len(target_arr) == 0:
+            continue
+        target_doll = target_arr.pop()
+        if len(backet) > 0 and backet[-1] == target_doll:
+            answer += 2
+            backet.pop()
+        else:
+            backet.append(target_doll)
+    return answer
+```
+
+
+

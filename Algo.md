@@ -1437,3 +1437,295 @@ def solution(answers):
     return result
 ```
 
+
+
+### 키패드 누르기
+
+#### 핵심 포인트
+
+- 키 간 거리를 어떻게 구할 것인가?
+
+#### 내 코드
+
+```python
+# 키패드를 2차원 배열로 배치한다.
+# [[1, 2, 3], [4, 5, 6], [7, 8, 9], [*, 0, #]]
+
+# 두 번호의 거리는 2차원 배열의 r의 차이 + c의 차이이다.
+# [1, 4, 7]은 왼손으로 누른다.
+# [3, 6, 9]는 오른손으로 누른다.
+
+# 현재 각 손가락의 위치를 저장하는 배열을 생성한다.
+# current_positions: [(3, 0), (3, 2)]
+# [왼손 좌표, 오른손 좌표]
+
+# 주어지는 숫자를 확인한다.
+# 1. [1, 4, 7] => 왼손
+# 2. [3, 6, 9] => 오른손
+# 3. [2, 5, 8, 0] => 좌표를 구한다.
+    # {2: (0, 1), 5: (1, 1), 8: (2, 1), 0: (3, 1)}
+    # 좌표를 기준으로 주어진 숫자와 두 엄지손가락의 거리를 계산한다.
+# 어떤 손가락으로 누르는 지 확인한 뒤, 엄지손가락의 위치를 업데이트한다.
+# L => current_positions[0] = ??
+# R => current_positions[1] = ??
+
+# 종료
+
+keypads = {
+    1: (0, 0),
+    2: (0, 1),
+    3: (0, 2),
+    4: (1, 0),
+    5: (1, 1),
+    6: (1, 2),
+    7: (2, 0),
+    8: (2, 1),
+    9: (2, 2),
+    0: (3, 1)
+}
+
+def solution(numbers, hand):
+    answer = ''
+    current_positions = [(3, 0), (3, 2)]
+    for number in numbers:
+        num_pos = keypads[number]
+        if num_pos[1] == 0:
+            answer += "L"
+            current_positions[0] = num_pos
+        elif num_pos[1] == 2:
+            answer += "R"
+            current_positions[1] = num_pos
+        else:
+            l_diff = abs(current_positions[0][0] - num_pos[0]) + abs(current_positions[0][1] - num_pos[1])
+            r_diff = abs(current_positions[1][0] - num_pos[0]) + abs(current_positions[1][1] - num_pos[1])
+            if l_diff < r_diff:
+                answer += "L"
+                current_positions[0] = num_pos
+            elif l_diff > r_diff:
+                answer += "R"
+                current_positions[1] = num_pos
+            elif hand == "left":
+                answer += "L"
+                current_positions[0] = num_pos
+            else:
+                answer += "R"
+                current_positions[1] = num_pos
+    return answer
+```
+
+
+
+### 숫자 문자열과 영단어
+
+#### 핵심 포인트
+
+- replace 메서드를 알고 있는가?
+
+#### 내 코드
+
+- replace 메서드는 체이닝이 가능했다.
+- 체이닝이 아닌 다른 방법도 가능하다.
+
+```python
+# replace 메서드를 쓰면 될까?
+# replace는 여러번 연결시켜서 쓸 수 있을까?
+
+def solution(s):
+    answer = 0
+    s = s.replace("zero", "0").replace("one", "1").replace("two", "2").replace("three", "3").replace("four", "4").replace("five", "5").replace("six", "6").replace("seven", "7").replace("eight", "8").replace("nine", "9")
+    print(s)
+    answer = int(s)
+    return answer
+```
+
+#### 다른 사람 코드
+
+- 변환할 내용을 저장한 뒤, 저장한 내용 전체를 순환하여 replace를 적용하는 방법
+
+```python
+num_dic = {"zero":"0", "one":"1", "two":"2", "three":"3", "four":"4", "five":"5", "six":"6", "seven":"7", "eight":"8", "nine":"9"}
+
+def solution(s):
+    answer = s
+    for key, value in num_dic.items():
+        answer = answer.replace(key, value)
+    return int(answer)
+```
+
+
+
+### 신규 아이디 추천
+
+#### 핵심 포인트
+
+- 너 정규식 쓸 줄 아니?
+
+
+
+#### 내 코드 1
+
+- 정규식을 쓰지 않은 버전
+- `ord` 이용
+- 4번째 단계에서 인덱스 에러 고려
+
+```python
+# 1. 정규식을 사용하지 않는 버전
+def solution(new_id):
+    answer = ''
+    # 1. 모든 대문자를 대응되는 소문자로 치환합니다.
+    new_id = new_id.lower()
+    # 2. 알파벳 소문자, 숫자, 빼기(-), 밑줄(_), 마침표(.)를 제외한 모든 문자 제거
+    temp = ""
+    for t in new_id:
+        if ord("a") <= ord(t) <= ord("z") or ord("0") <= ord(t) <= ord("9") or t in ["-", "_", "."]:
+            temp += t
+    new_id = temp
+    # 3. 마침표가 2번 이상 연속된 부분을 하나의 마침표로 치환
+    before_text = ""
+    temp = ""
+    for t in new_id:
+        if before_text == "." and t == before_text:
+            continue
+        else:
+            before_text = t
+            temp += t
+    new_id = temp
+    # 4. 마침표가 처음이나 끝에 위치한다면 제거
+    # 문자열을 인덱스로 접근하기 때문에 IndexError 위험
+    if len(new_id) > 0 and new_id[0] == ".":
+        new_id = new_id[1:]
+    if len(new_id) > 0 and new_id[-1] == ".":
+        new_id = new_id[:-1]
+    # 5. new_id가 빈 문자열이라면, new_id에 "a"를 대입
+    if len(new_id) == 0:
+        new_id = "a"
+    # 6. new_id의 길이가 16자 이상이면, 첫 15자만 남긴다.
+    # 줄였을 때, 마지막 문자가 마침표라면 제거한다.
+    if len(new_id) > 15:
+        new_id = new_id[:15]
+        if new_id[-1] == ".":
+            new_id = new_id[:-1]
+        
+    # 7. new_id의 길이가 2자 이하라면, 길이가 3이 될 때까지 마지막 문자를 더한다.
+    while len(new_id) < 3:
+        new_id += new_id[-1]
+    answer = new_id
+    return answer
+```
+
+
+
+#### 정규표현식 활용
+
+```python
+import re
+# 1. 패턴에 일치하지 않는 문자 삭제하기(일치하는 문자만 남기기)
+new_id = "...!@bat#*..y.abcdefghijklm"
+p = re.compile("[a-z0-9-_.]+")
+matched_list = re.findall(p, new_id)
+# re.findall("[a-z0-9-_.]+", new_id)
+# ['...', 'bat', '..y.abcdefghijklm']
+new_id = "".join(matched_list)
+# ...bat..y.abcdefghijklm
+
+
+# 2. 문자열 치환
+# 마침표가 2개 이상인 경우, 1개로 변환하기
+new_id = "...asdf..asdf..."
+p = re.compile("[.]{2,}")
+new_id = re.sub(p, ".", new_id)
+# .asdf.asdf.
+
+# 마침표가 처음이나 끝에 오면 제거하기
+new_id = ".asdf.asdf."
+new_id = re.sub("^[.]|[.]$", "", new_id)
+# asdf.asdf
+```
+
+
+
+#### 내 코드 2 (정규표현식)
+
+```python
+import re
+
+def solution(new_id):
+    answer = ''
+    # 1단계
+    new_id = new_id.lower()
+    # 2단계
+    temp_list = re.findall("[a-z0-9-_.]+", new_id)
+    new_id = "".join(temp_list)
+    # 3단계
+    new_id = re.sub("[.]{2,}", ".", new_id)
+    # 4단계
+    new_id = re.sub("^[.]|[.]$", "", new_id)
+    # 5단계
+    if len(new_id) == 0:
+        new_id = "a"
+    # 6단계
+    if len(new_id) > 15:
+        new_id = re.sub("[.]$", "", new_id[:15])
+    # 7단계
+    while len(new_id) < 3:
+        new_id += new_id[-1]
+    answer = new_id
+    return answer
+```
+
+
+
+### 로또의 최고 순위와 최저 순위
+
+#### 핵심 포인트
+
+- 집합 자료형 (`set`)을 활용할 수 있는가?
+
+#### 집합 자료형 (set)
+
+```python
+a_set = set([1, 2, 3])
+b_set = set([2, 3, 4])
+# 합집합
+print(a_set + b_set)	# {1, 2, 3, 4}
+
+# 차집합
+print(a_set - b_set)	# {1}
+print(b_set - a_set)	# {4}
+
+# 교집합
+print(a_set & b_set)	# {2, 3}
+
+# 값 추가하기
+# add
+a_set.add(10)
+print(a_set)			# {1, 2, 3, 10}
+
+# update
+b_set.update([10, 11, 12])
+print(b_set)			# {2, 3, 4, 10, 11, 12}
+
+# delete
+b_set.remove(10)
+print(b_set)			# {2, 3, 4, 11, 12}
+```
+
+
+
+#### 내 코드
+
+```python
+# 지워진 숫자가 모두 당첨숫자에 해당하는 경우
+# 지워진 숫자가 모두 당첨숫자에 해당하지 않는 경우
+# 즉, 남아있는 숫자 만으로 몇등에 해당하는 지 알아야 한다.
+results = [6, 6, 5, 4, 3, 2, 1]
+def solution(lottos, win_nums):
+    answer = []
+    # 집합 자료형: 교집합
+    lotto_set = set(win_nums) & set(lottos)
+    min_result = results[len(lotto_set)]
+    max_result = results[len(lotto_set) + lottos.count(0)]
+    answer = [max_result, min_result]
+    return answer
+```
+

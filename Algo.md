@@ -35,8 +35,6 @@ for tc in range(TC):
         print(f"[{','.join(list(map(str, num_list)))}]")
 ```
 
-
-
 #### 다른 분 코드 참고 (성능 😍)
 
 ```python
@@ -66,8 +64,6 @@ for tc in range(TC):
         print(f"[{','.join(answer)}]")
 ```
 
-
-
 **성능 차이**
 
 > Why?
@@ -78,10 +74,6 @@ for tc in range(TC):
 
 ![image-20210707192813558](README.assets/image-20210707192813558.png)
 
-
-
-
-
 ### 백준 - 2630 (색종이 만들기)
 
 [링크](https://www.acmicpc.net/problem/2630)
@@ -90,14 +82,10 @@ for tc in range(TC):
 
 - 쿼드트리
 
-
-
-
-
 #### 내 코드
 
 ```python
-# 2중 반복문을 
+# 2중 반복문을
 def check_board_color(r, c, n):
     color = BOARD[r][c]
     for i in range(r, r + n):
@@ -135,11 +123,7 @@ print(paper_count[0])
 print(paper_count[1])
 ```
 
-
-
 ### 백준 2667 단지번호붙이기
-
-
 
 #### 내 코드
 
@@ -192,10 +176,6 @@ for count in sorted(count_list):
     print(count)
 ```
 
-
-
-
-
 #### 다른 사람 코드
 
 - 인덱스 범위를 넘어가는 지 확인하는 부분에서 `ny in range(N)`과 같이 `in` 연산자와 `range()`를 사용했다.
@@ -238,11 +218,7 @@ for i in sorted(answer):
     print(i)
 ```
 
-
-
-
-
-### 1012_유기농 배추
+### 1012\_유기농 배추
 
 ```python
 # 지렁이의 이동 범위는 기준 위치에서 상하좌우
@@ -298,8 +274,6 @@ for tc in range(T):
     print(answer)
 ```
 
-
-
 #### 다른 사람 코드
 
 - 재귀로 넘겨줄 때, 인자를 바꿔서 보내주는 방식이 인상적
@@ -330,24 +304,14 @@ for i in range(T):
     print(earthworm)
 ```
 
+### 2178\_미로탐색
 
-
-
-
-### 2178_미로탐색
-
-
-
-### 7576_토마토
+### 7576\_토마토
 
 #### 내 코드 - 2
 
 - 모든 행/열을 탐색하는 것은 비효율적이라고 생각
 - 처음 행/열을 탐색할 때, 익지 않은 토마토의 개수를 따로 저장하여 bfs 탐색 시 상태가 변화하였을 때 1씩 차감하여 남은 토마토의 개수를 확인할 수 있을 것
-
-
-
-
 
 #### 내 코드 - 1
 
@@ -402,9 +366,7 @@ for r in range(R):
 print(answer)
 ```
 
-
-
-### 7562_나이트의 이동
+### 7562\_나이트의 이동
 
 > 유효성 검사를 할 때, `range`를 사용하는 경우 시간초과가 발생하는 케이스
 
@@ -417,8 +379,6 @@ if 0 <= nr < L and 0 <= nc < L and not visited[nr][nc]:
 if nr in range(L) and nc in range(L) and not visited[nr][nc]:
     # 시간초과
 ```
-
-
 
 #### 내 코드
 
@@ -467,9 +427,7 @@ for tc in range(TC):
     print(answer)
 ```
 
-
-
-### 1707_이분그래프
+### 1707\_이분그래프
 
 #### 하이라이트
 
@@ -489,13 +447,11 @@ for tc in range(TC):
 
   2만개 이상 넘어가는 경우에는 메모리초과에 주의해야겠다.
 
-  ---
+  ***
 
   해결책:
 
   `[[], [], [], ...]`1차원 배열을 만들어, 해당하는 index에 연결된 노드 번호를 추가해주는 방식으로 진행했다.
-
-  
 
 - 시간초과 발생
 
@@ -523,8 +479,6 @@ for tc in range(TC):
     for nn in board[cn]:
     ```
 
-  
-
 - 틀렸습니다
 
   아예 연결이 끊긴 노드가 있을 수 있다는 것을 고려하지 않았다.
@@ -544,8 +498,6 @@ for tc in range(TC):
           if answer == "NO":
               break
   ```
-
-  
 
 #### 내 코드 - 정답
 
@@ -592,10 +544,6 @@ for tc in range(TC):
     print(answer)
 ```
 
-
-
-
-
 #### 내 코드 - 시간초과
 
 ```python
@@ -638,12 +586,6 @@ for tc in range(TC):
     print(bfs(1))
 ```
 
-
-
-
-
-
-
 #### 현재 코드
 
 ```python
@@ -658,7 +600,7 @@ sys.stdin = open("1210_Ladder1.txt")
     # 현재 위치에서 좌, 우를 탐색한 뒤
         # 있으면 해당 가로선으로 이동
         # 없으면 위 칸으로 이동
-    
+
     # 좌 or 우로 이동하던 중 위로 갈 수 있는 길을 만나면, 위로 올라간다.
 
 N = 100
@@ -706,10 +648,6 @@ for _ in range(1, 11):
     print(f"#{tc} {cc}")
 ```
 
-
-
-
-
 #### 과거 코드
 
 ```python
@@ -731,7 +669,7 @@ for _ in range(10):
         if arr[r][c_idx] == 2:
             c = c_idx
             break
-    
+
     # 4. 도착점부터 위로 올라가며, 작업 수행
     while r > 0:
         # 4-1. 좌우를 탐색하며 1을 찾는다.
@@ -758,8 +696,6 @@ for _ in range(10):
 
     print(f"#{tc} {result}")
 ```
-
-
 
 ### 1211. Ladder2
 
@@ -813,9 +749,7 @@ for _ in range(10):
     print(f"#{tc} {answer}")
 ```
 
-
-
-### 1244_최대 상금
+### 1244\_최대 상금
 
 #### 내 코드
 
@@ -853,8 +787,6 @@ for tc in range(1, T + 1):
     solve(change_count)
     print(f"#{tc} {answer}")
 ```
-
-
 
 - `0`번째 인덱스 부터 `N-1`번째 인덱스까지 순환 [i]
   - `i + 1`부터 `N - 1`까지 수를 비교하며, `i`번째 값보다 큰 값들 중 가장 큰 값을 찾는다. [`idx`]
@@ -917,11 +849,7 @@ for tc in range(1, T + 1):
 
 ```
 
-
-
 # Programmers
-
-
 
 ## Lv 1
 
@@ -970,8 +898,6 @@ def solution(n, arr1, arr2):
 print(solution(6, [46, 33, 33 ,22, 31, 50], [27 ,56, 19, 14, 14, 10]))
 ```
 
-
-
 #### 다른 사람 코드 1
 
 - zip
@@ -1012,10 +938,6 @@ def test_line():
     assert line(5, 30) == '#### '
     assert line(5, 9 | 30) == '#####'
 ```
-
-
-
-
 
 ### 상호평가
 
@@ -1065,8 +987,6 @@ def solution(scores):
     return answer
 ```
 
-
-
 #### 다른 사람 코드 1
 
 - enumerate
@@ -1095,8 +1015,6 @@ def solution(scores):
     return ''.join(map(lambda x : get_grade(sum(x) / len(x)), score_table))
 ```
 
-
-
 #### 다른 사람 코드 2
 
 - transpose 방법
@@ -1123,15 +1041,13 @@ def solution(scores) :
     return "".join([ avg>=90 and "A" or avg>=80 and "B" or avg>=70 and "C" or avg>=50 and "D" or "F" for avg in avgs ])
 ```
 
-
-
 #### 다른 사람 코드 3
 
 - Counter
 
 ```python
 from collections import Counter
-def solution(scores):   
+def solution(scores):
     answer = ''
 
     for idx, score in enumerate(list(map(list, zip(*scores)))):
@@ -1155,8 +1071,6 @@ def solution(scores):
 
     return answer
 ```
-
-
 
 ### 직업군 추천하기
 
@@ -1190,8 +1104,6 @@ def solution(table, languages, preference):
     answer = score_list[0][0]
     return answer
 ```
-
-
 
 #### 다른 사람 코드 1
 
@@ -1258,8 +1170,6 @@ def solution(left, right):
     return answer
 ```
 
-
-
 ### 실패율
 
 #### 핵심 포인트
@@ -1277,7 +1187,7 @@ def solution(N, stages):
     failures = []
     for stage in stages:
         stage_tries[stage] += 1
-    
+
     # i번째 스테이지 총 도전자 수
     i_tries = stage_tries[N + 1]
     for i in range(N, 0, -1):
@@ -1286,13 +1196,11 @@ def solution(N, stages):
         if i_tries != 0:
             fail = stage_tries[i] / i_tries
         failures.append((i, fail))
-    
+
     failures.sort(key=lambda x: (-x[1], x[0]))
     answer = [i[0] for i in failures]
     return answer
 ```
-
-
 
 ### 폰켓몬
 
@@ -1317,16 +1225,12 @@ def solution(nums):
     return answer
 ```
 
-
-
 ### 체육복
 
 #### 핵심 포인트
 
 - 주어지는 배열이 정렬이 되어있는지 되어있지 않은지 확인할 것
 - set의 차집합을 사용해서, 문제를 더 간단히 할 수 있다.
-
-
 
 #### 내 코드
 
@@ -1340,7 +1244,7 @@ def solution(n, lost, reserve):
         students[i] -= 1
     for i in reserve:
         students[i] += 1
-    
+
     for i in sorted(reserve):
         if students[i] < 2:
             continue
@@ -1377,15 +1281,11 @@ def solution(n, lost, reserve):
     return n - len(losted)
 ```
 
-
-
 ### 모의고사
 
 #### 핵심 포인트
 
 - 패턴을 인지하는 것
-
-
 
 #### 내 코드
 
@@ -1437,7 +1337,152 @@ def solution(answers):
     return result
 ```
 
+### 소수 만들기
 
+#### 핵심 포인트
+
+- 소수를 구하는 방법
+
+  N이 소수라면, 1과 N외에 나누어 떨어지는 수가 없다는 것입니다.
+
+  반복문으로 표현하면 다음과 같습니다.
+
+  ```python
+  for n in range(2, N):
+      if N % n == 0:
+          return "소수가 아닙니다"
+  return "소수입니다"
+  ```
+
+  하지만, N - 1까지의 모든 수를 순회할 필요는 없습니다.
+
+  N의 제곱근까지의 수를 순회하면 됩니다.
+
+  그렇게 함으로써, 순회하는 수의 개수를 줄일 수 있습니다.
+
+  ```python
+  for n in range(2, int(N ** 0.5) + 1):
+      # ...
+  ```
+
+#### 내 코드
+
+```python
+# 주어진 수가 소수인지 판별하는 함수
+def check_prime(num):
+    for n in range(2, int(num ** 0.5) + 1):
+        if num % n == 0:
+            return False
+    return True
+
+# 3개의 수를 더하는 함수
+def sum_tri(nums):
+    sums = []
+    N = len(nums)
+    for i in range(0, N - 2):
+        for j in range(i + 1, N - 1):
+            for k in range(j + 1, N):
+                sums.append(nums[i] + nums[j] + nums[k])
+    return sums
+
+def solution(nums):
+    answer = 0
+    sums = sum_tri(nums)
+    for num in sums:
+        if check_prime(num):
+            print(num)
+            answer += 1
+    return answer
+```
+
+#### 다른 사람 코드
+
+- combinations 사용
+
+  조합을 생성하는 생성자
+
+  ```python
+  from itertools import combinations as cb
+  arr = [1, 2, 3]
+  print(list(cb(arr, 2)))
+  # [(1, 2), (1, 3), (2, 3)]
+  ```
+
+```python
+def solution(nums):
+    from itertools import combinations as cb
+    answer = 0
+    for a in cb(nums, 3):
+        cand = sum(a)
+        for j in range(2, cand):
+            if cand%j==0:
+                break
+        else:
+            answer += 1
+    return answer
+```
+
+### 내적
+
+#### 핵심 포인트
+
+- 두 배열의 같은 위치에 접근하는 방법
+
+#### 내 코드 1
+
+- 인덱스로 두 배열의 같은 위치에 접근
+
+```python
+def solution(a, b):
+    answer = 0
+    for i in range(len(a)):
+        answer += a[i] * b[i]
+	return answer
+```
+
+- zip을 통해 하나의 배열로 만듬
+
+```python
+def solution(a, b):
+    return sum([n * m for n, m in zip(a, b)])
+```
+
+### 크레인 인형뽑기 게임
+
+#### 핵심 포인트
+
+- 2차원 배열을 Transpose할 수 있는가?
+
+#### 내 코드
+
+```python
+def solution(board, moves):
+    answer = 0
+    # 주어진 2차원 배열을 Transpose하면, 세로줄을 하나의 일차원 배열로 관리할 수 있다.
+    board_t = []
+    N = len(board)
+    for c in range(N):
+        column = []
+        # 뒤집어서 넣으면 pop을 통해 하나씩 빼는 걸로 인형뽑기를 할 수 있겠는데?
+        for r in range(N - 1, -1, -1):
+            if board[r][c] == 0:
+                break
+            column.append(board[r][c])
+        board_t.append(column)
+
+    backet = []
+    for move in moves:
+        target_arr = board_t[move - 1]
+        if len(target_arr) == 0:
+            continue
+        target_doll = target_arr.pop()
+        if len(backet) > 0 and backet[-1] == target_doll:
+            answer += 2
+            backet.pop()
+        else:
+            backet.append(target_doll)
+    return answer
+```
 
 ### 키패드 누르기
 
@@ -1513,8 +1558,6 @@ def solution(numbers, hand):
     return answer
 ```
 
-
-
 ### 숫자 문자열과 영단어
 
 #### 핵심 포인트
@@ -1552,15 +1595,11 @@ def solution(s):
     return int(answer)
 ```
 
-
-
 ### 신규 아이디 추천
 
 #### 핵심 포인트
 
 - 너 정규식 쓸 줄 아니?
-
-
 
 #### 내 코드 1
 
@@ -1605,15 +1644,13 @@ def solution(new_id):
         new_id = new_id[:15]
         if new_id[-1] == ".":
             new_id = new_id[:-1]
-        
+
     # 7. new_id의 길이가 2자 이하라면, 길이가 3이 될 때까지 마지막 문자를 더한다.
     while len(new_id) < 3:
         new_id += new_id[-1]
     answer = new_id
     return answer
 ```
-
-
 
 #### 정규표현식 활용
 
@@ -1641,8 +1678,6 @@ new_id = ".asdf.asdf."
 new_id = re.sub("^[.]|[.]$", "", new_id)
 # asdf.asdf
 ```
-
-
 
 #### 내 코드 2 (정규표현식)
 
@@ -1672,8 +1707,6 @@ def solution(new_id):
     answer = new_id
     return answer
 ```
-
-
 
 ### 로또의 최고 순위와 최저 순위
 
@@ -1710,8 +1743,6 @@ b_set.remove(10)
 print(b_set)			# {2, 3, 4, 11, 12}
 ```
 
-
-
 #### 내 코드
 
 ```python
@@ -1726,6 +1757,139 @@ def solution(lottos, win_nums):
     min_result = results[len(lotto_set)]
     max_result = results[len(lotto_set) + lottos.count(0)]
     answer = [max_result, min_result]
+    return answer
+```
+
+
+
+### N개의 최소공배수
+
+#### 핵심 포인트
+
+- 두 수의 최소공배수를 구할 수 있는가?
+- 과정을 나누어서 생각할 수 있는가?
+
+
+
+#### 내 코드
+
+- 한 번에 문제를 해결하려고 하지 않고, 2개의 수씩 해결하려고 함
+
+```python
+# 두 숫자를 선택하고, 최소 공배수를 구한다.
+# (요소가 하나가 남을 때까지 반복)
+
+# 두 수의 최소 공배수를 구하는 방법
+# 자신이 아닌 다른 수만큼 순회를 하며, 곱한 값을 배열에 저장한다.
+# 각 수의 배수로 이루어진 배열을 집합(set)을 이용해 겹치는 부분(교집합 &)을 추출한다.
+# 집합을 배열로 형변환하고, 배열을 오름차순으로 정렬한 뒤 가장 앞에 있는 값을 선택한다.
+
+def get_lcm(n, m):
+    n_list = []
+    m_list = []
+    for i in range(1, m + 1):
+        n_list.append(n * i)
+    for j in range(1, n + 1):
+        m_list.append(m * j)
+    cm_list = list(set(n_list) & set(m_list))
+    cm_list.sort()
+    return cm_list[0]
+
+
+def solution(arr):
+    answer = 0
+    while len(arr) > 1:
+        n = arr.pop()
+        m = arr.pop()
+        lcm = get_lcm(n, m)
+        arr.append(lcm)
+    answer = arr[0]
+    return answer
+```
+
+#### 최대 공약수와 최소 공배수
+
+```python
+# 최대 공약수
+def gcd(x, y):
+    a, b = max(a, b), min(a, b)
+    while b:
+        a, b = b, a % b
+    return a
+
+# 최소 공배수
+# 두 수의 곱 // 최대 공약수
+def lcm(x, y):
+    return x * y // gcd(x, y)
+```
+
+
+
+### JadenCase 문자열 만들기
+
+#### 핵심 포인트
+
+- 문제를 잘 읽기 (공백문자가 연속으로 나오는 경우를 고려해야 함)
+
+
+
+#### 내 코드
+
+```python
+import re
+
+def solution(s):
+    answer = ''
+    before_text = " "
+    
+    s = s.lower()
+    for t in s:
+        if before_text == " " and re.match("[a-z]", t):
+            print(t)
+            answer += t.upper()
+        else:
+            answer += t
+        before_text = t
+    return answer
+```
+
+
+
+### 행렬의 곱셈
+
+#### 핵심 포인트
+
+- 행렬의 곱셈을 인덱스로 접근하기
+
+
+
+#### 내 코드
+
+- 머리가 아프다
+
+```python
+# 행렬의 곱셈 (내적)
+# arr1은 행으로 이동
+# r은 고정 / c는 ++
+
+# arr2는 열로 이동
+# c는 고정 / r은 ++
+
+# arr1의 열의 길이 == arr2의 행의 길이
+# arr1의 행 위치(r), arr2의 열 위치(c)가 각각 고정되며, 그 위치에 곱한 값이 놓이게 된다.
+
+def solution(arr1, arr2):
+    arr1_r = len(arr1)
+    arr1_c = len(arr1[0])
+    arr2_c = len(arr2[0])
+    
+    answer = [[] for _ in range(arr1_r)]
+    for i in range(arr1_r):
+        for j in range(arr2_c):
+            temp = 0
+            for k in range(arr1_c):
+                temp += arr1[i][k] * arr2[k][j]
+            answer[i].append(temp)
     return answer
 ```
 

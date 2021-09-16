@@ -183,3 +183,214 @@ def solution(land):
     return max(land[-1])
 ```
 
+
+
+### 💢 다음 큰 숫자
+
+#### 핵심 포인트
+
+- 때로는 문제에 너무 빠지지 말자
+
+#### 다른 사람 코드
+
+```python
+def solution(n):
+    answer = 0
+    bi_n = f"{n:b}"
+    one_count = bi_n.count("1")
+    
+    # 1로만 이루어진 이진수라면?
+    if len(bi_n) == one_count:
+        answer = int("10" + bi_n[1:], 2)
+    # 1과 0이 섞여있는 이진수라면?
+    for i in range(n + 1, 1000000):
+        if f"{i:b}".count("1") == one_count:
+            answer = i
+            break
+    return answer
+```
+
+
+
+### n진수 게임
+
+#### 핵심 포인트
+
+- 10진수를 n진수로 변환할 수 있는가?
+
+  ```python
+  # 10진수 => n진수
+  def decimal_to_n(num, n):
+      if num == 0:
+          return "0"
+      temp = []
+      while num:
+          num, mod = divmod(num, n)
+          temp.append(str(mod))
+  	return temp[::-1]
+  ```
+
+  
+
+#### 내 코드
+
+
+
+### 올바른 괄호
+
+#### 핵심 포인트
+
+- 스택 활용
+
+#### 내 코드
+
+```python
+def solution(s):
+    stack = []
+    for b in s:
+        if b == ")":
+            if len(stack) == 0:
+                return False
+            stack.pop()
+        if b == "(":
+            stack.append(b)
+    else:
+        if len(stack):
+            return False
+    return True
+```
+
+
+
+### [3차] 파일명 정렬
+
+#### 핵심 포인트
+
+- 문자열을 능숙히 다룰 수 있는가?
+
+
+
+#### 정규표현식 (`findall`)
+
+```python
+import re
+
+a = "foo010bar020.zip"
+print(re.findall("([a-z]+)([0-9]+)(.*)"))
+# [('foo', '010', 'bar020.zip')]
+```
+
+> 소괄호를 이용하여, 원하는 부분을 캡쳐하여 가져올 수 있다.
+
+
+
+#### 내 코드
+
+- `re.findall()`
+- `group` 사용
+
+```python
+import re
+
+def solution(files):
+    answer = []
+    file_list = []
+    for i in range(len(files)):
+        head, num, tail = re.findall("([A-Za-z- .]+)([0-9]+)(.*)", files[i])[0]
+        file_list.append((head, num, tail, i))
+    file_list.sort(key=lambda x: (x[0].lower(), int(x[1]), x[3]))
+    print(file_list)
+    answer = ["".join([x[0], x[1], x[2]]) for x in file_list]
+    return answer
+```
+
+
+
+#### 다른 사람 코드
+
+- groups 사용
+
+```python
+import re
+
+def solution(files):
+
+    def key_function(fn):
+        head,number,tail = re.match(r'([a-z-. ]+)(\d{,5})(.*)',fn).groups()
+        return [head,int(number)]
+
+    return sorted(files, key = lambda x: key_function(x.lower()))
+```
+
+
+
+### 압축
+
+#### 핵심 포인트
+
+- Dict 활용
+
+
+
+#### 내 코드
+
+```python
+def reset_dic(dic):
+    for o in range(ord("A"), ord("Z") + 1):
+        dic[chr(o)] = o - ord("A") + 1
+
+def solution(msg):
+    dic = {}
+    answer = []
+    reset_dic(dic)
+    i = 0
+    while i < len(msg):
+        l = 0
+        # 사전에 어디까지 저장되었는지 확인
+        while dic.get(msg[i:i + l + 1]):
+            if i + l + 1 > len(msg):
+                break
+            l += 1
+        w = msg[i:i + l]
+        if i + l < len(msg): c = msg[i + l]
+        else: c = ""
+        # 출력
+        answer.append(dic[w])
+        # 사전 추가
+        dic[w + c] = len(dic) + 1
+        # 인덱스 업데이트
+        i = i + l
+    return answer
+```
+
+
+
+#### 다른 사람 코드
+
+```python
+def solution(msg):
+    myDic = dict(zip("ABCDEFGHIJKLMNOPQRSTUVWXYZ", range(1,27)))
+    answer = []
+
+    state = 1 # 1: ok. 2: add
+    while len(msg) > 0:
+        temp = -1
+        for j in range(1, len(msg)+1):
+            if list(myDic.keys()).count(msg[0:j]) != 0:
+                temp = myDic[msg[0:j]]
+                state = 1
+            else :
+                # add to dictionary
+                myDic[msg[0:j]] = len(myDic)+1
+                state = 2
+                break
+        answer += [temp]
+        if state == 2 :
+            msg = msg[j-1:]
+        else :
+            msg = ""
+    return answer
+```
+
+
+

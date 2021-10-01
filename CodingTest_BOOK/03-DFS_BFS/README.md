@@ -278,6 +278,8 @@ for n in graph[node]:
 
 - [x] BJ_2606 바이러스
 - [x] Book_음료수 얼려 먹기
+- [x] Book_미로 탈출
+- [x] BJ_11724 연결 요소의 개수
 
 
 
